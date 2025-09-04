@@ -1,0 +1,94 @@
+body {
+  margin: 0 15px;
+  background-color: black;
+}
+
+#plaTitle {
+  color: brown;
+}
+
+div {
+  margin: 10px 0;
+  background-color: cadetblue;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.addNewPost {
+  text-decoration: none;
+  font-size: 20px;
+  color: crimson;
+}
+
+.addNewPost:active {
+  color: blue;
+}
+
+.colour {
+  color: blue;
+}
+
+.colour:hover {
+  text-decoration: underline;
+}
+
+#deletePost {
+  padding: 4px 7px;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 550;
+  margin-top: 5px;
+  background-color: transparent;
+  border: 2px solid green;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#deletePost:hover {
+  background-color: rgb(69, 135, 138);
+}
+
+.whitecolor {
+  color: rgb(153, 147, 147);
+}
+
+#hoverEffect:hover {
+  text-decoration: brown underline;
+}
+
+#username {
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 2px;
+  border: none;
+  background-color: gray;
+}
+
+#username::placeholder {
+  color: black;
+}
+
+#content {
+  padding: 5px 7px;
+  font-size: 15px;
+  border-radius: 2px;
+  border: none;
+  background-color: gray;
+}
+
+#content::placeholder {
+  color: black;
+}
+
+#addBtn {
+  padding: 4px 6px;
+  background-color: gray;
+  border: none;
+  cursor: pointer;
+}
+
+.space {
+  display: inline-block;
+  margin: 5px 0;
+}
