@@ -33,17 +33,17 @@ let posts = [
   },
 ];
 
-app.get("/posts", (req, res) => {
+app.get("/", (req, res) => {
   res.render("index.ejs", { posts });
 });
 
-app.get("/posts/new", (req, res) => {
+app.get("/new", (req, res) => {
   res.render("new.ejs");
 });
 
 // Add a new Post
 
-app.post("/posts", (req, res) => {
+app.post("/", (req, res) => {
   let id = uuidv4();
   let { username, content } = req.body;
   posts.push({ id, username, content });
@@ -52,7 +52,7 @@ app.post("/posts", (req, res) => {
 
 // See Post In Details
 
-app.get("/posts/:id", (req, res) => {
+app.get("/:id", (req, res) => {
   let { id } = req.params;
   let post = posts.find((p) => id === p.id);
   res.render("show.ejs", { post });
@@ -60,7 +60,7 @@ app.get("/posts/:id", (req, res) => {
 
 // Edit Post content
 
-app.patch("/posts/:id", (req, res) => {
+app.patch("/:id", (req, res) => {
   let { id } = req.params;
   let newContent = req.body.content;
   let post = posts.find((p) => id === p.id);
@@ -68,7 +68,7 @@ app.patch("/posts/:id", (req, res) => {
   res.redirect("/posts");
 });
 
-app.get("/posts/:id/edit", (req, res) => {
+app.get("/:id/edit", (req, res) => {
   let { id } = req.params;
   let post = posts.find((p) => id === p.id);
   res.render("edit.ejs", { post });
@@ -76,7 +76,7 @@ app.get("/posts/:id/edit", (req, res) => {
 
 // Delete a Post
 
-app.delete("/posts/:id", (req, res) => {
+app.delete("/:id", (req, res) => {
   let { id } = req.params;
   posts = posts.filter((p) => id !== p.id);
   res.redirect("/posts");
