@@ -15,12 +15,12 @@
       <big class="space"><%= post.content %></big><br /><br />
 
       <a
-        href="http://localhost:8080/posts/<%= post.id %>"
+        href="/posts/<%= post.id %>"
         class="addNewPost colour"
         >See in Details</a
       ><br />
       <a
-        href="http://localhost:8080/posts/<%= post.id %>/edit"
+        href="/posts/<%= post.id %>/edit"
         class="addNewPost colour"
         >Edit Post</a
       ><br />
@@ -31,7 +31,7 @@
     <% } %>
 
     <a
-      href="http://localhost:8080/posts/new"
+      href="/posts/new"
       class="addNewPost"
       id="hoverEffect"
       >Create new Post +</a
