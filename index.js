@@ -33,7 +33,7 @@ let posts = [
   },
 ];
 
-app.get((req,res) => {
+app.get("/", (req,res) => {
   res.redirect("/posts")
 })
 
